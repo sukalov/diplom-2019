@@ -1,10 +1,12 @@
 %!TEX TS-program = xelatex
 \documentclass[a4paper,12pt]{article}
-\usepackage[left=30mm, top=30mm, right=30mm, bottom=30mm, nohead, nofoot]{geometry}
+
 \usepackage[OT6, T1]{fontenc}
-\usepackage[utf-8]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[english, russian]{babel}%% загружает пакет многоязыковой вёрстки
 
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
 
 \usepackage{fontspec}
 \setmainfont[
@@ -38,10 +40,10 @@ BoldItalicFont=brillbi.ttf
 	%%% Страница
 	\usepackage{extsizes} % Возможность сделать 14-й шрифт
 	\usepackage{geometry} % Простой способ задавать поля
-	\geometry{top=20mm}
-	\geometry{bottom=20mm}
-	\geometry{left=20mm}
-	\geometry{right=20mm}
+	\geometry{top=25mm}
+	\geometry{bottom=25mm}
+	\geometry{left=25mm}
+	\geometry{right=25mm}
 	
 	%\usepackage{fancyhdr} % Колонтитулы
 	% \pagestyle{fancy}
@@ -66,7 +68,7 @@ BoldItalicFont=brillbi.ttf
 	\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
 	\hypersetup{ % Гиперссылки
 	colorlinks=true, % false: ссылки в рамках; true: цветные ссылки
-	linkcolor=dark-gray, % внутренние ссылки
+	linkcolor=black, % внутренние ссылки
 	citecolor=black, % на библиографию
 	filecolor=black, % на файлы
 	urlcolor=ForestGreen % на URL
@@ -98,7 +100,7 @@ BoldItalicFont=brillbi.ttf
 	\usepackage{forest} % для рисования деревьев
 	\usepackage{vowel} % для рисования трапеций гласных
 	\usepackage{natbib}
-	\bibliographystyle{ugost2008ns}
+	\bibliographystyle{ugost2008ns.bst}
 	\bibpunct[: ]{[}{]}{;}{a}{}{,}
 
 	\usepackage{philex} % пакет для примеров

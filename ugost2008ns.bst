@@ -353,7 +353,7 @@ FUNCTION {bbl.edby}    %  { "\bbledby{}" }
    { curlanguage "ukrainian" =
       {"Під ред."}
       { curlanguage "russian" =
-         {"Под ред."}
+         {"Ред."}
          { curlanguage "german" =
             { "ed." }
             {"language is not defined: " language "edby" * * warning$ "Ed.\ by"}
